@@ -14,7 +14,6 @@ The analysis includes data cleaning, feature engineering, exploratory data analy
 ## Tools Used
 
 - SQL (MySQL)
-- Power BI
 
 ---
 
