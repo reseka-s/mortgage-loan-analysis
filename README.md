@@ -1,9 +1,9 @@
 # mortgage-loan-analysis
 End-to-end Mortgage Loan Analysis using SQL
 
-# 📊 Mortgage Loan Analysis
+# Mortgage Loan Analysis
 
-## 📌 Project Overview
+## Project Overview
 
 This project analyzes mortgage loan data to identify key lending patterns across borrower demographics, financial profiles, and risk categories.
 
@@ -11,14 +11,14 @@ The analysis includes data cleaning, feature engineering, exploratory data analy
 
 ---
 
-## 🛠 Tools Used
+## Tools Used
 
 - SQL (MySQL)
 - Power BI
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 SQL
 - Data Cleaning
@@ -27,7 +27,7 @@ SQL
 - Business Analysis
 ---
 
-## 📈 Key Insights
+## Key Insights
 
 - Doctors receive the highest average loan amount.
 - PhD applicants qualify for the highest average loan.
@@ -37,7 +37,7 @@ SQL
 
 ---
 
-## 🚀 Skills Demonstrated
+## Skills Demonstrated
 
 - SQL Data Cleaning
 - Feature Engineering
