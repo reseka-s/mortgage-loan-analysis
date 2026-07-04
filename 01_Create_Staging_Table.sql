@@ -1,16 +1,16 @@
 -- Creating the staging table
 CREATE TABLE mortgage_staging
-LIKE mortgage_loan;
+LIKE mortgage_loan_dataset;
 
 INSERT INTO mortgage_staging
 SELECT *
-FROM mortgage_loan;
+FROM mortgage_loan_dataset;
 
 SELECT * 
 FROM mortgage_staging;
 
 -- Renaming the columns for easier usage in query
-ALTER TABLE mortgage_staging
+ALTER TABLE mortgage_staging 
 RENAME COLUMN Gender TO gender,
 RENAME COLUMN Age TO age,
 RENAME COLUMN Married TO marital_status,
