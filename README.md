@@ -5,7 +5,7 @@ End-to-end Mortgage Loan Analysis using SQL
 
 ## Project Overview
 
-This project analyzes mortgage loan data to identify key lending patterns across borrower demographics, financial profiles, and risk categories.
+This project analyzes mortgage loan data (with 49,990 applicants) to identify key lending patterns across borrower demographics, financial profiles, and risk categories.
 
 The analysis includes data cleaning, feature engineering, exploratory data analysis (EDA), business analysis, and an interactive Power BI dashboard.
 
@@ -32,7 +32,8 @@ SQL
 - PhD applicants qualify for the highest average loan.
 - Urban borrowers receive larger average loans.
 - Low-risk borrowers represent nearly 60% of applicants.
-- Rural Bankers with 11–20 years of experience and credit scores between 650–749 form the highest-value borrower segment.
+- Urban areas have the highest number of low-risk applicants (27,466), 
+and 57.94% of applicants whereas Rural has highest low risk 58.89% with only 7550 applicants
 
 ---
 
