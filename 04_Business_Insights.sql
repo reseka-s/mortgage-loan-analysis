@@ -6,7 +6,7 @@ ROUND(AVG(max_loan_amount),2) AS avg_loan
 FROM mortgage_staging
 GROUP BY education
 ORDER BY avg_loan DESC;
-/*PhD holders receive the highest average loan amount (698,273.44).*/
+/*PhD holders receive the highest average loan amount.*/
 
 -- 2. Loan amount by employment years
 SELECT 
@@ -30,7 +30,7 @@ COUNT(*) AS Applicants,
 ROUND(AVG(annual_income),2) AS avg_income
 FROM mortgage_staging
 GROUP BY marital_status;
-/*Married applicants receive higher average loan amounts than unmarried applicants.*/
+/*Unmarried applicants receive higher average loan amounts than Married applicants.*/
 
 -- 4. Does monthly debt affect the loan amount?
 SELECT 
@@ -97,7 +97,7 @@ ROUND(AVG(max_loan_amount),2) AS avg_loan,
 ROUND(AVG(credit_score),2) AS avg_credit_score
 FROM mortgage_staging
 GROUP BY job;
-/*Doctors receive the highest average loan amount among all occupations (719,417.77).*/
+/*Doctors receive the highest average loan amount among all occupations*/
 
 -- 8. Which location has the strongest borrowing profile?
 WITH risk_percentage AS (
@@ -116,7 +116,7 @@ ORDER BY Applicants DESC)
 SELECT location, Applicants,avg_income,avg_loan,avg_credit_score,low_risk_applicants,
 ROUND(low_risk_applicants/Applicants * 100,2) AS Low_risk_percentage
 FROM risk_percentage;
-/*Urban applicants receive the highest average loan amount (674,404.38).*/
+/*Urban applicants receive the highest average loan amount.*/
 
 -- Which factors are common among the low risk borrowers?
 SELECT risk_category,
@@ -126,7 +126,7 @@ ROUND(AVG(down_payment),2) AS avg_down_payment,
 ROUND(AVG(emp_years),2) AS avg_experience
 FROM mortgage_staging
 WHERE risk_category = 'Low Risk';
-/*Low-risk borrowers receive the highest average loan amount (766,299.06).*/
+/*Low-risk borrowers receive the highest average loan amount.*/
 
 -- 10.a. Borrower profile with highest average[USING CTE function, cross join and window function]
 WITH risk_percentage AS (
