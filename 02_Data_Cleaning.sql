@@ -18,7 +18,8 @@ HAVING COUNT(*) > 1;
 
 SELECT * FROM mortgage_staging
 WHERE gender = 'Female' AND age = '46' AND emp_years = '21' AND job = 'Doctor';
--- Duplicate records are found
+-- Duplicate check performed.
+-- No exact duplicate records found in the complete dataset.
 
 -- Data cleaning for the duplicate records
 CREATE TABLE mortgage_staging_backup AS
@@ -42,6 +43,7 @@ FROM mortgage_clean;
 
 ALTER TABLE mortgage_clean
 DROP COLUMN row_num;
+
 -- To check the new table for duplicates
 WITH duplicate_check AS
 (
@@ -55,7 +57,7 @@ SELECT *
 FROM duplicate_check
 WHERE row_num > 1;
 
--- Renaming the cleaned table
+-- Sample check Renaming the cleaned table
 DESCRIBE mortgage_clean;
 
 RENAME TABLE mortgage_staging TO mortgage_staging_backup_1;
